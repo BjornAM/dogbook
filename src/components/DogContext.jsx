@@ -132,7 +132,6 @@ const ctx = createContext({
   updateDog: ({ nickname, description, age }) => {},
 });
 
-//Hur fungerar denna exporten? Hur kan vi importera useDogs och använda addDog utifrån dett?
 export const useDogs = () => useContext(ctx);
 
 const KEY = "__dogs";

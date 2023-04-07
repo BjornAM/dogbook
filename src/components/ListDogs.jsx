@@ -2,12 +2,8 @@ import { useDogs } from "./DogContext";
 import { Link } from "react-router-dom";
 
 export const ListDogs = () => {
-  //Importerar context-hook useDogs och hämtar 2 funktioner
   const { dogs, removeDog } = useDogs();
   return (
-    //Parametern d=dogs?
-    //Dubbelkolla vad .map gör.
-    //Styla i css-fil
     <>
       {dogs.map((d) => (
         <div
@@ -32,9 +28,12 @@ export const ListDogs = () => {
             onClick={() => removeDog(d)}
             style={{
               background: "red",
+              display: "grid",
+              padding: 5,
+              marginLeft: 10,
             }}
           >
-            remove
+            Delete
           </button>
         </div>
       ))}

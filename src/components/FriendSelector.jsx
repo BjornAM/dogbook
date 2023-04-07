@@ -16,7 +16,7 @@ export const FriendSelector = () => {
         justifyContent: "space-between",
       }}
     >
-      <span>pick a dog friend</span>
+      <span>Pick a dog friend</span>
       <div>
         <select value={selected} onChange={(e) => setSelected(e.target.value)}>
           <option value={""} disabled hidden>

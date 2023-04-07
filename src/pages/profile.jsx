@@ -4,20 +4,16 @@ import { useDogs } from "../components/DogContext";
 import { FriendsList } from "../components/FriendsLists";
 
 export const Profile = () => {
-  const { id } = useParams(); // Hämtar id från URL:en. id=hittar och visar rätt hundprofil.
-  //Vad gör vi här? Hämtar data om hundar för att använda i denna filen?
+  const { id } = useParams();
   const { dogs, currentDog, setDogById, toggleDogStatus } = useDogs();
 
-  //Är det här hunden får sitt id? Vad annars?
   useEffect(() => {
     if (dogs.length < 1) return;
     setDogById(id);
   }, [id, dogs]);
 
-  //Var skickas detta? Jag förstår inte detta helt.
   if (!currentDog) return <span>Missing {id}</span>;
 
-  // Hur används Friend-komponenterna nedan?
   return (
     <>
       <div>
