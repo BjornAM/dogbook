@@ -10,10 +10,16 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Dogbook</h1>
       <div className="card">
-        <h1>Dogbook</h1>
         <Link to="/create">
-          <button>Add new dog</button>
+          <button
+            style={{
+              marginBottom: 20,
+            }}
+          >
+            Add new dog
+          </button>
         </Link>
         <ListDogs />
       </div>

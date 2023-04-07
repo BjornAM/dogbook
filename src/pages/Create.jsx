@@ -25,7 +25,7 @@ export const CreatePage = () => {
       <Link to="/">Go back</Link>
       <h1>Add new dog</h1>
       <input
-        placeholder="Skriv hundens namn"
+        placeholder="Enter dog name.."
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
